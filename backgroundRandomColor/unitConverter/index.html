@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Conversion</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Length Conversion</h1>
+      <br />
+      <select name="sideA" id="sideA" onchange="changesMade()">
+        <option value="feet">Feet</option>
+        <option value="inch">Inches</option>
+        <option value="yard">Yards</option>
+        <option value="mile">Miles</option>
+        <option value="metre">Meters</option>
+        <option value="km">Kilometers</option>
+      </select>
+      <input type="number" id="valueA" value="0" onchange="changesValueA()" />
+      <span>=</span>
+      <select name="sideB" id="sideB" onchange="changesMade()">
+        <option value="feet">Feet</option>
+        <option value="inch">Inches</option>
+        <option value="yard">Yards</option>
+        <option value="mile">Miles</option>
+        <option value="metre">Meters</option>
+        <option value="km">Kilometers</option>
+      </select>
+      <input type="number" id="valueB" value="0" onchange="changesValueB()" />
+    </div>
+    <script>
+      var firstOption = "feet";
+      var secondOption = "feet";
+      var secondValue = 0;
+      var firstValue = 0; //default values
+      var feet, inch, yard, mile, meter, kilometer; //length values
+      var showA, showB; //displaying values
+      function changesMade() {
+        firstOption = document.getElementById("sideA").value;
+        secondOption = document.getElementById("sideB").value;
+        checkInfo();
+      }
+      function changesValueA() {
+        firstValue = parseFloat(document.getElementById("valueA").value);
+        changesMade();
+        document.getElementById("valueB").value = showB;
+      }
+      function changesValueB() {
+        secondValue = parseFloat(document.getElementById("valueB").value);
+        changesMade();
+        document.getElementById("valueA").value = showA;
+      }
+      function checkInfo() {
+        checkFirstOption();
+        checkSecondOption();
+      }
+      function checkFirstOption() {
+        if (firstOption == "feet") {
+          feetToAll(firstValue);
+          showA = feet;
+        } else if ((firstOption = "inch")) {
+          inchToAll(firstValue);
+          showA = inch;
+        } else if (firstOption == "yard") {
+          yardToAll(firstValue);
+          showA = yard;
+        } else if (firstOption == "mile") {
+          mileToAll(firstValue);
+          showA = mile;
+        } else if (firstOption == "m") {
+          meterToAll(firstValue);
+          showA = meter;
+        } else if (firstOption == "km") {
+          kilometerToAll(firstValue);
+          showA = kilometer;
+        }
+      }
+
+      function checkSecondOption() {
+        if (secondOption == "feet") {
+          feetToAll(secondValue);
+          showB = feet;
+        } else if ((secondOption = "inch")) {
+          inchToAll(secondValue);
+          showB = inch;
+        } else if (secondOption == "yard") {
+          yardToAll(secondValue);
+          showB = yard;
+        } else if (secondOption == "mile") {
+          mileToAll(secondValue);
+          showB = mile;
+        } else if (secondOption == "m") {
+          meterToAll(secondValue);
+          showB = meter;
+        } else if (secondOption == "km") {
+          kilometerToAll(secondValue);
+          showB = kilometer;
+        }
+      }
+      function feetToAll(ft) {
+        feet = ft;
+        inch = feet * 12;
+        yard = feet / 3;
+        mile = feet / 5280;
+        meter = feet * 0.3048;
+        kilometer = feet * 0.0003048;
+      }
+      function inchToAll(inches) {
+        var ft = inches / 12;
+        feetToAll(ft);
+      }
+      function yardToAll(yd) {
+        var ft = yd * 3;
+        feetToAll(ft);
+      }
+      function mileToAll(miles) {
+        var ft = miles * 5280;
+        feetToAll(ft);
+      }
+      function meterToAll(m) {
+        var ft = m / 12;
+        feetToAll(ft);
+      }
+      function kilometerToAll(km) {
+        ft = km / 0.0003048;
+        feetToAll(ft);
+      }
+    </script>
+  </body>
+</html>

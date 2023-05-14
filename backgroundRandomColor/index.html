@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backgrounder color change</title>
+    <style>
+      body {
+        background-color: rgb(14 26 250 / 52%);
+      }
+      h1 {
+        color: rgb(16, 13, 17);
+        text-align: center;
+      }
+      #clicker {
+        height: 30px;
+        width: 65px;
+        border: 2px solid lightslategray;
+        box-shadow: 3px 3px 2px black;
+        position: absolute;
+        left: 45%;
+        bottom: 50%;
+      }
+      #clicker:active {
+        color: crimson;
+        background-color: bisque;
+        border: none;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Press "click me" to change the background color</h1>
+    <button id="clicker">click me</button>
+    <script>
+      const bodtEl = document.getElementsByTagName("body")[0];
+      const btnEl = document.querySelector("button");
+      let colors = [
+        "red",
+        "yellow",
+        "blue",
+        "purple",
+        "brown",
+        "grey",
+        "green",
+        "violet",
+        "skyblue",
+        "silver",
+        "orange",
+        "pink",
+        "lightgreen",
+        "crimsom",
+        "chocolate",
+        "cyan",
+        "#FF6633",
+        "#FFB399",
+        "#FF33FF",
+        "#FFFF99",
+        "#00B3E6",
+        "#E6B333",
+        "#3366E6",
+        "#999966",
+        "#99FF99",
+        "#B34D4D",
+        "#80B300",
+        "#809900",
+        "#E6B3B3",
+        "#6680B3",
+        "#66991A",
+        "#FF99E6",
+        "#CCFF1A",
+        "#FF1A66",
+        "#E6331A",
+        "#33FFCC",
+        "#66994D",
+        "#B366CC",
+        "#4D8000",
+        "#B33300",
+        "#CC80CC",
+        "#66664D",
+        "#991AFF",
+        "#E666FF",
+        "#4DB3FF",
+        "#1AB399",
+        "#E666B3",
+        "#33991A",
+        "#CC9999",
+        "#B3B31A",
+        "#00E680",
+        "#4D8066",
+        "#809980",
+        "#E6FF80",
+        "#1AFF33",
+        "#999933",
+        "#FF3380",
+        "#CCCC00",
+        "#66E64D",
+        "#4D80CC",
+        "#9900B3",
+        "#E64D66",
+        "#4DB380",
+        "#FF4D4D",
+        "#99E6E6",
+        "#6666FF",
+      ];
+      btnEl.addEventListener("click", () => {
+        let randomNumber = parseInt(Math.random() * colors.length);
+        let color = colors[randomNumber];
+        document.body.style.background = color;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: #4f4c42;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left:0em;
+
+      }
+      #form-wrapper {
+        height: 200px;
+        width: 200px;
+        background-color: #282424;
+        position: relative;
+        top: 6em;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        padding: 5em;
+        border-radius: 5px;
+        box-shadow: 9px 9px 13px #141510;
+      }
+      span {
+        margin-left: 3em;
+      }
+      form input {
+        height: 20px;
+        width: 210px;
+        border-radius: 5px;
+      }
+      form input::placeholder {
+        color: dimgray;
+      }
+      .form-error {
+        color: rgb(175 18 18);
+      }
+      .button {
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color: rgb(141, 49, 227);
+        border: none;
+        border-radius: 5px;
+      }
+      #form-header {
+        width: 150px;
+        height: 40px;
+        color: white;
+        position: relative;
+        left: 1em;
+        text-align: center;
+        background-color: rgb(22, 234, 22);
+        border: none;
+        border-radius: 5px;
+      }
+      .button:hover {
+        background-color: rgb(11, 10, 12);
+      }
+      a:hover {
+        color: rgb(11, 10, 12);
+      }
+      #submit {
+        position: relative;
+        left: 2em;
+      }
+      a {
+        color: rgb(22, 234, 22);
+        font-size: 21px;
+        text-decoration: none;
+      }
+      p {
+        color: white;
+      }
+      #togglePassword {
+        position: absolute;
+        left: 17em;
+        top: 13.3em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- client side Validation -->
+    <div id="form-wrapper">
+      <h1 id="form-header">Sign In</h1>
+      <form action="./login.php" method="POST" name="myForm">
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Email Address or Username"
+          required
+        /><br />
+        <span class="form-error " id="email-error"></span><br />
+        <i class="far fa-eye" id="togglePassword"></i>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter Password"
+          required
+        /><br />
+        <span class="form-error " id="password-error"></span><br />
+        <input type="submit" id="submit" value="Log In" class="button" />
+        <p id="toggle-signup">
+          Don't have an account?<a href="./register.html">REGISTER</a>
+        </p>
+      </form>
+    </div>
+    <script>
+      //show password
+      const togglePassword = document.querySelector("#togglePassword");
+      const password = document.querySelector("#password");
+      togglePassword.addEventListener("click", function (e) {
+        const type =
+          password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        this.classList.toggle("fa-eye-slash");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #b98fe0;
+}
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  padding-top: 50px;
+  background-color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 100vh;
+  transition: transform 0.3s ease-in 0s;
+}
+.sidebar nav {
+  padding: 10px;
+}
+.sidebar nav li {
+  list-style: none;
+  font-size: 25px;
+  padding: 20px 0;
+}
+.sidebar nav li a {
+  text-decoration: none;
+  color: black;
+}
+.main {
+  /* background-color: yellow; */
+  width: 90vw;
+  padding: 10px;
+  padding-left: 20px;
+  flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  display: flex;
+}
+.info {
+  /* background-color: green; */
+  height: 60vh;
+  width: 80vw;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+}
+.aboutMe {
+  font-size: 25px;
+  margin-top: 10px;
+  padding-right: 100px;
+  font-family: cursive;
+}
+.myInfo {
+  display: flex;
+  flex-direction: column;
+}
+.myInfo h1 {
+  font-weight: 400;
+  font-family: fantasy;
+  margin-left: 15px;
+}
+.skillContainer h2 {
+  font-family: cursive;
+  font-weight: bold;
+  margin-left: 15px;
+}
+.skillContainer h2{
+    font-size: 45px;
+    color: #926161;
+}
+div .skill {
+  margin: 10px;
+  background-color: gray;
+  height: 20px;
+  width: 300px;
+  border-radius: 30px;
+  margin-left: 20px;
+}
+.htmlRange {
+  background-color: blue;
+  height: 20px;
+  width: 285px;
+  border-radius: 30px;
+  animation: html;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+.cssRange {
+  background-color: blue;
+  height: 20px;
+  width: 250px;
+  border-radius: 30px;
+  animation: css;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+.jsRange {
+  background-color: blue;
+  height: 20px;
+  width: 270px;
+  border-radius: 30px;
+  animation: js;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+.phpRange {
+  background-color: blue;
+  height: 20px;
+  width: 200px;
+  border-radius: 30px;
+  animation: php;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+.flutterRange {
+  background-color: blue;
+  height: 20px;
+  width: 140px;
+  border-radius: 30px;
+  animation: flutter;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+.javaRange {
+  background-color: blue;
+  height: 20px;
+  width: 50px;
+  border-radius: 30px;
+  animation: java;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+.cRange {
+  background-color: blue;
+  height: 20px;
+  width: 290px;
+  border-radius: 30px;
+  animation: c;
+  animation-duration: 7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+.myPhoto img {
+  height: 60vh;
+}
+@keyframes c {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 290px;
+  }
+}
+@keyframes java {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 50px;
+  }
+}
+@keyframes flutter {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 140px;
+  }
+}
+@keyframes php {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 200px;
+  }
+}
+@keyframes js {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 270px;
+  }
+}
+@keyframes css {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 250px;
+  }
+}
+@keyframes html {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 285px;
+  }
+}
+
+.hamburger{
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    cursor: pointer;
+}
+.sidebarOut{
+    transform: translate(-180px,0px);
+    }
+.altSkillContainer{
+    display: none;
+}
+@media (max-width:1100px) {
+    .myInfo h1{
+        font-weight: 100;
+        font-size: 20px;
+    }
+    .myInfo p{
+        font-size: 17px;
+        padding: 0px;
+        margin: 0px;
+    }
+    .skillContainer h2{
+        font-size: 20px;
+    }
+    .skillContainer strong{
+        font-size: 15px;
+    }
+        }
+@media (max-width:750px) {
+    .aboutMe{
+        width: 95vw;
+    }
+    .skillContainer{
+        position: absolute;
+        bottom: 0px;
+        right: 7vw;
+    }
+        }
+@media (max-width:800px) {
+    .myInfo h1{
+        font-weight: 100;
+        font-size: 16px;
+    }
+    .myInfo p{
+        font-size: 12px;
+    }
+    .skillContainer h2{
+        font-size: 14px;
+    }
+    .skillContainer strong{
+        font-size: 14px;
+    }
+        }
+@media (max-width:500px) {
+    .skillContainer{
+        display: none;
+    }
+    .altSkillContainer{
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 5vw;
+    }
+    .altSkillContainer div{
+        margin-bottom: 3vh;
+        margin-top: 2vh;
+    }
+        }
+@media (max-width:280px) {
+    .altSkillContainer div{
+        margin-bottom: 1vh;
+        margin-top: 0.5vh;
+    }
+        }

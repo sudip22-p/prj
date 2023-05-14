@@ -1,0 +1,170 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+        background-color: #4f4c42;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+.navList{
+    list-style: none;
+    position: relative;
+    top: -2em;
+    display: inline-block;
+    margin-left:0.5%;
+}
+.first{
+    margin-left:0%;
+}
+.apart{
+    position: relative;
+    left: 20%;
+    margin-left:2%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.userPoint{
+    width: 5em;
+        height: 1.5em;
+        padding-top: 0.5em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        color: white;
+        background-color: rgb(141, 49, 227);
+        border: none;
+        border-radius: 5px;
+}
+.login{
+    width: 3.2em;
+}
+.userPoint:hover {
+        background-color: rgb(11, 10, 12);
+      }
+.rem4:hover {
+        background-color: gray;
+      }
+.rem4{
+        padding: 1em;
+        border-radius: 5px;
+        height: 1em;
+      }
+    #wrapper{
+        height: 9.8em;
+        margin-left: -0.5em;
+        margin-right: -0.5em;
+        margin-top: -0.5em;
+        padding-top: 2em;
+        background-color: #282424;
+        box-shadow: 9px 9px 13px #141510;
+        min-width:542px;
+    }
+    #message{
+        height: 22em;
+        position: relative;
+        left: 0px;
+        right: 0px;
+        top: 7em;
+        margin: auto;
+        width: 32em;
+    }
+    .makeCenter{
+        position: relative;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+    }
+    .whiteText{
+        color: white;
+    }
+    #just-hello{
+        font-size: 3em;
+    }
+    #welcome,#connecting{
+        font-size: 1.5em;
+    }
+    .image{
+        position: relative;
+        top: 1.5em;
+        border-radius: 50%;
+    }
+     @media only screen and (max-width: 600px) {
+        .userPoint{
+        width: 4.5em;
+        height: 2em;
+        padding-top: 0.5em;
+        padding-left: 1em;
+        padding-right: 0.5em;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size:0.75em;
+}
+#wrapper{
+        height: 5em;
+        margin-left: -2em;
+        margin-top: -2em;
+        padding-top: 1em;
+        background-color: #282424;
+        box-shadow: 9px 9px 13px #141510;
+        min-width:20em;
+        font-size:7px;
+    }
+    #message{
+        height: 18em;
+        position: relative;
+        left: 0px;
+        right: 0px;
+        top: 0em;
+        margin: auto;
+        width: 16em;
+    }
+    #just-hello{
+        font-size: 2em;
+    }
+    #welcome,#connecting{
+        font-size: 1em;
+    }
+    .image{
+        position: relative;
+        height:3em;
+        top: 1em;
+        margin-left:-25px;
+        padding-left:0px;
+        border-radius: 50%;
+    }
+    .apart{
+    position: relative;
+    left: 8%;
+    margin-left:2%;
+}
+    }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <ul>
+            <li class="navList first"><a href="index.html"><img class="image
+                " src="./Assets/Images/navbarLogo.png" alt="Logo" height="50em"></li>
+            <li class="navList leftPaddingMore first"><a href="index.html"><h3 class="rem4">Home</h3></a></li>
+            <li class="navList"><a href="login.html"><h3 class="rem4">Services</h3></a></li>
+            <li class="navList"><a href="login.html"><h3 class="rem4">Team</h3></a></li>
+            <li class="navList"><a href="login.html"><h3 class="rem4">Contact</h3></a></li>
+            <li class="navList apart"><a href="login.html"><h3 class="userPoint login">LOGIN</h3></a></li>
+            <li class="navList apart"><a href="register.html"><h3 class="userPoint">REGISTER</h3></a></li>
+        </ul>
+    </div>
+    <div id="message">
+        <h1 class="whiteText" id="just-hello">Hello there!!!!</h1>
+        <h2 class="whiteText" id="welcome">Welcome to my site...</h2>
+        <h3 class="whiteText"  id="connecting">Connect with me</h3>
+        <a href="login.html"><h3 class="userPoint makeCenter">PROCEED</h3></a>
+    </div>
+</body>
+</html>

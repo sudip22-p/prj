@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showing Password</title>
+    <style>
+        #wrapper{
+            height: 50px;
+            width: 200px;
+            margin: auto;
+            padding-top: 200px;
+        }
+        #name,#pw{
+            
+            background-color: palegoldenrod;
+        }
+        #pwChecker{
+            display: none;
+        }
+        #pw:valid ~ #pwChecker{
+            display: inline-block;
+        }
+        label{
+            color: red;
+        }
+        form{
+            
+    background-color: #adb3e6;
+    padding: 50px;
+    width: 200px;
+    box-shadow: 8px 8px #3f5a18;
+
+        }
+        h1{
+            color: green;
+            align-content: center;
+        }
+        body{
+            background-color: #c4ffdd;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <form action="#">
+            <h1>Signup</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="enter name" required><br>
+            <label for="pw">Password:</label>
+            <input type="password" id="pw" placeholder="enter password" required>
+            <span id="pwChecker"> <input type="checkbox" name="showPw" id="showPw">Show Password </span>
+        </form>
+    </div>
+    <script>
+        const pwEl=document.getElementById('pw');
+        const showEl=document.getElementById('showPw');
+        showEl.addEventListener('click',()=>{
+            if(pwEl.type=="password"){
+                pwEl.type="text";
+            }
+            else{
+                pwEl.type="password";
+            }
+        })
+    </script>
+</body>
+</html>
