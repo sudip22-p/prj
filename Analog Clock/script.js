@@ -7,9 +7,6 @@ function timeUpd(){
     let hr=date.getHours();
     let min=date.getMinutes();
     let sec=date.getSeconds();
-    hr=hr==0?12:hr;
-    hr=hr>12?hr%12:hr;
-    console.log(date,hrs,min,sec)
     let hrRotation=30*hr+min/2;
     let minRotation=6*min;
     let secRotation=6*sec;
